@@ -17,13 +17,15 @@ function App() {
   }
 
   return (
-    <CardProvider className="App">
+    <div className="App">
+      <CardProvider>
       {cartIsShown&&<Cart onClose={hideCartHandler}/>}
      <Header onShowCart={showCartHandler}/>
      <main>
         <Meals/>
      </main>
     </CardProvider>
+    </div>
   );
 }
 
